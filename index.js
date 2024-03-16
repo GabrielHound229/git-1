@@ -1,23 +1,23 @@
-let NomeHeroi = "Cecil"
-let Nivel = "5001"
+function calcularNivel(vitorias, derrotas) {
+const saldoVitorias = vitorias - derrotas;
+let nivel;
 
-if (Nivel <= 1000 ){
-    console.log ("O rank de" , NomeHeroi, "é Ferro");
-}else if (Nivel <= 1001, Nivel <= 2000){
-    console.log ("O rank de" , NomeHeroi, "é Bronze");
-}else if (Nivel <= 2001, Nivel <= 5000){
-    console.log ("O rank de" , NomeHeroi, "é Prata");
-}else if (Nivel <= 5001, Nivel <= 7000){
-    console.log ("O rank de" , NomeHeroi, "é Ouro");
-}else if (Nivel <= 7001, Nivel <= 8000){
-    console.log ("O rank de" , NomeHeroi, "é Platina");
-}else if (Nivel <= 8001, Nivel <= 9000){
-    console.log ("O rank de" , NomeHeroi, "é Ascendente");
-}else if (Nivel <= 9001, Nivel <= 10000){
-    console.log ("O rank de" , NomeHeroi, "é Imortal");
-}else if (Nivel >= 10001){
-    console.log ("O rank de" , NomeHeroi, "é Radiante");
+if (vitorias < 10) {
+    nivel = "Ferro"
+} else if (vitorias >= 10 && vitorias <= 20) {
+    nivel = "Bronze";
+} else if (vitorias >= 21 && vitorias <= 50) {
+    nivel = "Prata";
+} else if (vitorias >= 51 && vitorias <= 80) {
+    nivel = "Ouro";
+} else if (vitorias >= 81 && vitorias <= 90) {
+    nivel = "Diamante";
+} else if (vitorias >= 91 && vitorias <= 100) {
+    nivel = "Lendário";
+} else {
+    nivel = "Imortal";
 }
 
-console.log ("O Herói de nome", NomeHeroi, "Está no nível", Nivel);
+console.log('O Herói tem de saldo de ${saldoVitorias} está no nível de ${nivel}');
 
+}
